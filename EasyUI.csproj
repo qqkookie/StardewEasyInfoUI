@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <DeployModFolderName>$(MSBuildProjectName)</DeployModFolderName>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7937E493-EB19-436F-9AE6-54BFA3E68C34}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasyUI</RootNamespace>
+    <AssemblyName>EasyUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mod\LanguageKeys.cs" />
+    <Compile Include="Mod\LevelExtenderInterface.cs" />
+    <Compile Include="Mod\ModConfig.cs" />
+    <Compile Include="Option\ModOptionCheckbox.cs" />
+    <Compile Include="Option\ModOptionPageButton.cs" />
+    <Compile Include="Option\ModOptionPageHandler.cs" />
+    <Compile Include="Mod\Utils.cs" />
+    <Compile Include="Mod\ModEntry.cs" />
+    <Compile Include="Mod\IconHandler.cs" />
+    <Compile Include="Option\OptionKeys.cs" />
+    <Compile Include="Option\ModOptionPart.cs" />
+    <Compile Include="Option\ModOptionPage.cs" />
+    <Compile Include="Mod\AssemblyInfo.cs" />
+    <Compile Include="Parts\ExperienceBar.cs" />
+    <Compile Include="Parts\ExperiencePointDisplay.cs" />
+    <Compile Include="Parts\ShowNPCOnMap.cs" />
+    <Compile Include="Parts\IconLuckOfDay.cs" />
+    <Compile Include="Parts\ShopHarvestPrices.cs" />
+    <Compile Include="Parts\ShowAccurateHearts.cs" />
+    <Compile Include="Parts\IconBirthday.cs" />
+    <Compile Include="Parts\ShowCalendarAndBillboard.cs" />
+    <Compile Include="Parts\ShowCropAndBarrelTime.cs" />
+    <Compile Include="Parts\ShowBuriedItems.cs" />
+    <Compile Include="Parts\ShowItemHoverInformation.cs" />
+    <Compile Include="Parts\ShowItemEffectRanges.cs" />
+    <Compile Include="Parts\ShowLocationName.cs" />
+    <Compile Include="Parts\ShowMonsterHealthBar.cs" />
+    <Compile Include="Parts\IconTodaysRecipe.cs" />
+    <Compile Include="Parts\ShowStaminaHealthNumber.cs" />
+    <Compile Include="Parts\IconToolUpgrade.cs" />
+    <Compile Include="Parts\IconTravelingMerchant.cs" />
+    <Compile Include="Parts\ShowAnimalNeedsPet.cs" />
+    <Compile Include="Parts\SkipIntro.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README_OLD.md" />
+    <None Include="i18n\de.json" />
+    <None Include="i18n\default.json" />
+    <None Include="i18n\es.json" />
+    <None Include="i18n\fr.json" />
+    <None Include="i18n\ja.json" />
+    <None Include="i18n\ko.json" />
+    <None Include="i18n\pt.json" />
+    <None Include="i18n\ru.json" />
+    <None Include="i18n\th.json" />
+    <None Include="i18n\zh.json" />
+    <None Include="manifest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="README.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\HealthBar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\LevelUp license.txt" />
+    <Content Include="Assets\LevelUp.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Stardew Valley, Version=1.3.6999.41729, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GAMES\Stardew Valley\Stardew Valley.exe</HintPath>
+    </Reference>
+    <Reference Include="StardewModdingAPI, Version=2.11.2.0, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

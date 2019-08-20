@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Media;
@@ -19,7 +19,7 @@ namespace EasyUI
 {
     internal class ExperienceBar : IDisposable
     {
-        public interface LevelExtenderEvents
+        public interface ILevelExtenderEvents
         {
             event EventHandler OnXPChanged;
         }
@@ -48,7 +48,7 @@ namespace EasyUI
         private SoundPlayer _player;
         private IModEvents Events => ModEntry.Events;
 
-        private LevelExtenderInterface _levelExtenderAPI;
+        private ILevelExtenderInterface _levelExtenderAPI;
 
         private int _currentSkillLevel = 0;
         private int _experienceRequiredToLevel = -1;
@@ -77,7 +77,7 @@ namespace EasyUI
             var something = ModEntry.ModHelper.ModRegistry.GetApi("DevinLematty.LevelExtender");
             try
             {
-                _levelExtenderAPI = ModEntry.ModHelper.ModRegistry.GetApi<LevelExtenderInterface>("DevinLematty.LevelExtender");
+                _levelExtenderAPI = ModEntry.ModHelper.ModRegistry.GetApi<ILevelExtenderInterface>("DevinLematty.LevelExtender");
             }
             catch (Exception ex)
             {

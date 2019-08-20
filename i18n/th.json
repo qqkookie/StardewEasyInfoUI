@@ -22,7 +22,7 @@
     "Minutes": "นาที",
     "NotFeelingLuckyAtAll": "วันนี้คุณไม่รู้สึกโชคดีเลย",
     "ReadyToHarvest": "พร้อมที่จะเก็บเกี่ยว!",
-    "TodaysRecipe": "สูตรวันนี้: ",
+    "TodaysNewRecipe": "**NEW** สูตรวันนี้: ",
     "TravelingMerchantIsInTown": "พ่อค้าเดินทางอยู่ในเมือง!",
     "DaysUntilToolIsUpgraded": "{0} days until {1} is finished upgrade",
     "ToolIsFinishedBeingUpgraded": "{0} is finished",
@@ -41,7 +41,7 @@
     "ShowExtraItemInformation": "Show item hover information",
     "ShowTravelingMerchant": "Show Traveling Merchant",
     "ShowHarvestPricesInShop": "Show shop harvest prices",
-    "ShowWhenNewRecipesAreAvailable": "Show when new recipes are available",
+    "ShowNewRecipeAvailable": "Show when new recipes are available",
     "ShowToolUpgradeStatus": "Display tool upgrade status",
 
     // --- Location Names ---

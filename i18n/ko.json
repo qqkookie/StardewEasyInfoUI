@@ -5,8 +5,8 @@
     "icon.LuckyButNotTooLucky": "오늘은 일진이 괜찬은 편이네요.",
     "icon.MaybeStayHome": "오늘은 집에 있는 게 낫겠네요...",
     "icon.NotFeelingLuckyAtAll": "오늘은 불길한 날이네요...",
-    "icon.TodaysRecipe": "오늘의 요리 레시피: ",
-    "icon.GusIsSellingRecipe": "Gus가 오늘 {0}의 레시피를 팔고있다!",
+    "icon.TodaysNewRecipe": "오늘의 새로운 요리 레시피: ",
+    "icon.GusIsSellingRecipe": "Gus가 오늘 {0}의 요리 레시피를 팔고있어요!",
     "icon.DaysUntilToolIsUpgraded": "{1}의 업글 완료까지 {0}일 남음",
     "icon.ToolIsFinishedBeingUpgraded": "{0}의 업글 완료",
     "icon.TravelingMerchantIsInTown": "행상인마차가 마을에 왔다",
@@ -44,7 +44,7 @@
     //  Daily icons
     "option.ShowLuckIcon": "오늘의 행운 아이콘 표시",
     "option.ShowBirthdayIcon": "생일 아이콘 표시",
-    "option.ShowWhenNewRecipesAreAvailable": "새로운 레시피 나오면 알림",
+    "option.ShowNewRecipeAvailable": "새로운 레시피 나오면 알림",
     "option.ShowToolUpgradeStatus": "도구 업글 진행 표시",
     "option.ShowTravelingMerchant": "행상인마차 방문 알림",
 

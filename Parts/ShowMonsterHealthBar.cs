@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -126,7 +126,7 @@ namespace EasyUI
                 return 0;
         }
 
-        private static Color healthColor(float hpRatio)
+        private static Color HealthColor(float hpRatio)
         {
             if (hpRatio > 0.8f) return ColorScheme[0];
             else if (hpRatio > 0.55f) return ColorScheme[1];
@@ -146,8 +146,8 @@ namespace EasyUI
             const int SPRITE_HEIGHT = 28;
             const int SPRITE_FRONT = 0;
             const int SPRITE_BACK = 1;
-            const int SPRITE_BACK2 = 2;
-            const int SPRITE_INACTIVE = 3;
+            // const int SPRITE_BACK2 = 2;
+            // const int SPRITE_INACTIVE = 3;
 
             const int BAR_MARGIN = 4;
 
@@ -192,7 +192,7 @@ namespace EasyUI
                 // Get HP of the monster
                 int monhp = monster.Health;
                 float hpRatio = (float)monhp / (float)Math.Max(monster.MaxHealth, monhp);
-                Color barColor = healthColor(hpRatio);
+                Color barColor = HealthColor(hpRatio);
 
                 //  for normal hp bar, display the stats
                 if (KillClass >= 2)

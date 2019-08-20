@@ -4,7 +4,7 @@
     "ShowLocationName": "Display current location name",
     "option.ShowBuriedItems": "Display spots where item is buried under ground",
     "ShowStaminaHealthNumber": "Display current stamina/health by number",
-    "GusIsSellingRecipe": "Gus is selling {0} recipe today!",
+    "icon.GusIsSellingRecipe": "Gus is selling {0} recipe today!",
     "TrackOnMap": "Track on map",
     "label.bundle-stack": "{0}: Qty.  {2} / {1}",
     "label.unit-price": "Una unidad: ",
@@ -22,7 +22,7 @@
     "Minutes": "minutos",
     "NotFeelingLuckyAtAll": "No te sientes afortunado en absoluto...",
     "ReadyToHarvest": "¡Listo para cosechar!",
-    "TodaysRecipe": "Receta de hoy: ",
+    "TodaysNewRecipe": "Nueva receta de hoy: ",
     "TravelingMerchantIsInTown": "¡El comerciante ambulante está en la zona!",
     "DaysUntilToolIsUpgraded": "{0} días hasta que {1} termine de actualizarse",
     "ToolIsFinishedBeingUpgraded": "¡{0} está terminado!",
@@ -41,7 +41,7 @@
     "ShowExtraItemInformation": "Mostrar información extra de objetos",
     "ShowTravelingMerchant": "Mostrar comerciante ambulante",
     "ShowHarvestPricesInShop": "Mostrar los precios de cosechas de la tienda",
-    "ShowWhenNewRecipesAreAvailable": "Mostrar cuando hay nuevas recetas disponibles",
+    "ShowNewRecipeAvailable": "Mostrar cuando hay nuevas recetas disponibles",
     "ShowToolUpgradeStatus": "Mostrar el estado de actualización de la herramienta",
 
     // --- Location Names ---

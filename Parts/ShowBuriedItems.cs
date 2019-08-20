@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -50,6 +50,7 @@ namespace EasyUI
 
         public void Dispose()
         {
+            pixelTexture.Dispose();
             ToggleOption(false);
         }
 
@@ -72,7 +73,7 @@ namespace EasyUI
             return (Game1.player.CurrentTool is Hoe) || (Game1.mine != null && (Game1.player.CurrentTool is Pickaxe));
         }
 
-        private string[] Tresures = { "Arch", "Iridium", "Gold", "Coins", "CaveCarrot", "Coal", "Copper" };
+        // private string[] Tresures = { "Arch", "Iridium", "Gold", "Coins", "CaveCarrot", "Coal", "Copper" };
 
         private void FindBuried()
         {

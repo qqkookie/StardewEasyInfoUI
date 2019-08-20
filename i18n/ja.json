@@ -5,7 +5,7 @@
     "icon.LuckyButNotTooLucky": "幸運を感じる...しかしあまりにも幸運ではない",
     "icon.MaybeStayHome": "多分あなたは今日家にいなければなりません...",
     "icon.NotFeelingLuckyAtAll": "あなたは今日も幸運を感じていません...",
-    "icon.TodaysRecipe": "今日のレシピ： ",
+    "icon.TodaysNewRecipe": "今日の **NEW** レシピ： ",
     "icon.GusIsSellingRecipe": "Gus is selling {0} recipe today!",
     "icon.DaysUntilToolIsUpgraded": "{1}日が終わるまで{0}日間",
     "icon.ToolIsFinishedBeingUpgraded": "{0}が終わった！",
@@ -31,7 +31,7 @@
     //  Daily icons
     "option.ShowLuckIcon": "幸運アイコンを表示する",
     "option.ShowBirthdayIcon": "誕生日を表示アイコン",
-    "option.ShowWhenNewRecipesAreAvailable": "新しいレシピが利用可能になったら表示する",
+    "option.ShowNewRecipeAvailable": "新しいレシピが利用可能になったら表示する",
     "option.ShowToolUpgradeStatus": "ツールのアップグレードステータスを表示する",
     "option.ShowTravelingMerchant": "旅行中の商人を表示する",
 

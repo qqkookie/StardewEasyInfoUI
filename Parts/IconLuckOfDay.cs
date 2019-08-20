@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
@@ -85,7 +85,7 @@ namespace EasyUI
                 _color.R = 155;
             }
 
-            if (ModEntry.Config.DisableTodayMessage)
+            if (!ModEntry.Config.ShowTodayMessage)
                 return;
 
             await Task.Delay(2000);
@@ -95,7 +95,6 @@ namespace EasyUI
             await Task.Delay(2000);
             string luck = ModEntry.Reflection.GetMethod(new StardewValley.Objects.TV(), "getFortuneForecast").Invoke<string>();
             Game1.addHUDMessage(new HUDMessage(luck, HUDMessage.newQuest_type));
-
         }
 
         /// <summary>Raised after drawing the HUD (item toolbar, clock, etc) to the sprite batch, but before it's rendered to the screen. The vanilla HUD may be hidden at this point (e.g. because a menu is open).</summary>

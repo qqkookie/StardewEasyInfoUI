@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 
@@ -25,7 +25,7 @@ namespace EasyUI
 
         private readonly IconLuckOfDay _iconLuckOfDay;
         private readonly IconBirthday _iconBirthday;
-        private readonly IconTodaysRecipe _iconTodaysRecipe;
+        private readonly IconNewRecipe _iconNewRecipe;
         private readonly IconToolUpgrade _iconToolUpgrade;
         private readonly IconTravelingMerchant _iconTravelingMerchant;
         internal readonly ShowNPCOnMap _showNPCOnMap;
@@ -55,7 +55,7 @@ namespace EasyUI
 
             _iconLuckOfDay = new IconLuckOfDay();
             _iconBirthday = new IconBirthday();
-            _iconTodaysRecipe = new IconTodaysRecipe();
+            _iconNewRecipe = new IconNewRecipe();
             _iconToolUpgrade = new IconToolUpgrade();
             _iconTravelingMerchant = new IconTravelingMerchant();
 
@@ -80,7 +80,7 @@ namespace EasyUI
             {
                 _iconLuckOfDay,
                 _iconBirthday,
-                _iconTodaysRecipe,
+                _iconNewRecipe,
                 _iconToolUpgrade,
                 _iconTravelingMerchant,
 
@@ -91,7 +91,7 @@ namespace EasyUI
                 // _showMonsterHealthBar,
                 _showScarecrowAndSprinklerRange,
                 // _showLocationName,
-                // _showBuriedItems,
+                _showBuriedItems,
                 // _showStaminaHealthNumber,
                 _showWAnimalNeedsPet,
                 _showItemHoverInformation,
@@ -109,7 +109,7 @@ namespace EasyUI
                 thisVersion.Major + "." + thisVersion.Minor + "." + thisVersion.Build));
             _optionParts.Add(new ModOptionCheckbox(Trans(OptionKeys.IconLuckOfDay), whichOption++, _iconLuckOfDay.Toggle, _options, OptionKeys.IconLuckOfDay));
             _optionParts.Add(new ModOptionCheckbox(Trans(OptionKeys.IconBirthday), whichOption++, _iconBirthday.ToggleOption, _options, OptionKeys.IconBirthday));
-            _optionParts.Add(new ModOptionCheckbox(Trans(OptionKeys.IconTodaysRecipe), whichOption++, _iconTodaysRecipe.ToggleOption, _options, OptionKeys.IconTodaysRecipe));
+            _optionParts.Add(new ModOptionCheckbox(Trans(OptionKeys.IconNewRecipe), whichOption++, _iconNewRecipe.ToggleOption, _options, OptionKeys.IconNewRecipe));
             _optionParts.Add(new ModOptionCheckbox(Trans(OptionKeys.IconToolUpgrade), whichOption++, _iconToolUpgrade.ToggleOption, _options, OptionKeys.IconToolUpgrade));
             _optionParts.Add(new ModOptionCheckbox(Trans(OptionKeys.IconTravelingMerchant), whichOption++, _iconTravelingMerchant.ToggleOption, _options, OptionKeys.IconTravelingMerchant));
 

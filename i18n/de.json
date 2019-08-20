@@ -5,7 +5,7 @@
     "icon.LuckyButNotTooLucky": "Du fühlst dich glücklich ... aber nicht zu glücklich",
     "icon.MaybeStayHome": "Vielleicht solltest du heute zu Hause bleiben...",
     "icon.NotFeelingLuckyAtAll": "Du fühlst dich heute gar nicht glücklich...",
-    "icon.TodaysRecipe": "Heutiges Rezept: ",
+    "icon.TodaysNewRecipe": "Heutiges Neu Rezept: ",
     "icon.GusIsSellingRecipe": "Gus is selling {0} recipe today!",
     "icon.DaysUntilToolIsUpgraded": "{0} Tage bis {1} fertig verbessert wurde",
     "icon.ToolIsFinishedBeingUpgraded": "{0} ist fertig",
@@ -31,7 +31,7 @@
     //  Daily icons
     "option.ShowLuckIcon": "Zeige Glücksymbol",
     "option.ShowBirthdayIcon": "Zeige Geburtstagssymbol",
-    "option.ShowWhenNewRecipesAreAvailable": "Zeige, wenn neue Rezepte verfügbar sind",
+    "option.ShowNewRecipeAvailable": "Zeige, wenn neue Rezepte verfügbar sind",
     "option.ShowToolUpgradeStatus": "Zeige Werkzeugverbesserungsfortschritt",
     "option.ShowTravelingMerchant": "Zeige reisenden Händler",
 

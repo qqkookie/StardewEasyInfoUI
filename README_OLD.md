@@ -1,8 +1,9 @@
-﻿# UI INFO SUITE 1.X by Cdaragorn
+UI INFO SUITE 1.X by Cdaragorn
+========
 
-This is description on old pre-2.0 version of [UI Info Suits](https://www.nexusmods.com/stardewvalley/mods/1150)
-
-Version ~1.7.23 uploaded on 10 January 2019 by Cdaragorn
+This is description on old version of
+[UI Info Suits mod](https://www.nexusmods.com/stardewvalley/mods/1150)
+as of Version ~1.7.23 uploaded on 10 January 2019 by Cdaragorn
 
 ## Intro
 
@@ -169,8 +170,8 @@ Please endorse if you like this mod. It really helps out the author
   - Initial version
 
 
--------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------
+----------------------------------
+----------------------------------
 
 # UiModSuite Version 1.0 by Demiacle
 

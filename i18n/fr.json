@@ -22,7 +22,7 @@
     "Minutes": "minutes",
     "NotFeelingLuckyAtAll": "Tu ne te sens pas tu tout chanceux...",
     "ReadyToHarvest": "Prêt à récolter",
-    "TodaysRecipe": "Recette d'aujourd'hui: ",
+    "TodaysNewRecipe": "**NEW** Recette d'aujourd'hui: ",
     "TravelingMerchantIsInTown": "Le marchand itinérant est en ville",
     "DaysUntilToolIsUpgraded": "{0} jours avant que {1} ne termine de s'améliorer",
     "ToolIsFinishedBeingUpgraded": "{0} est terminé",
@@ -41,7 +41,7 @@
     "ShowExtraItemInformation": "Montrer informations supp. des objets",
     "ShowTravelingMerchant": "Montrer le marchand itinérant",
     "ShowHarvestPricesInShop": "Montrer le prix des récoles en magasin",
-    "ShowWhenNewRecipesAreAvailable": "Montrer quand nouvelles recettes disp.",
+    "ShowNewRecipeAvailable": "Montrer quand nouvelles recettes disp.",
     "ShowToolUpgradeStatus": "Montrer état de l'amélioration des outils",
 
     // --- Location Names ---

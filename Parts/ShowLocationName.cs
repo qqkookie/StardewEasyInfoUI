@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -23,7 +23,7 @@ namespace EasyUI
 
         internal void ToggleOption(bool showLocationName)
         {
-            if (!ModEntry.Config.ShowLocationPopUp)
+            if (!ModEntry.Config.ShowLocationMessage)
             {
                 ModEntry.Events.Player.Warped -= OnWarped;
 
@@ -79,7 +79,7 @@ namespace EasyUI
                 DisplayName = locationName;
                 ModEntry.Logger.Log($"No translation: {DisplayName} for {Translation.Locale}", LogLevel.Info);
             }
-            else if (!ModEntry.Config.ShowLocationPopUp)
+            else if (!ModEntry.Config.ShowLocationMessage)
             {
                 OSDFont = Game1.smallFont;
                 OSDFont.Spacing = -2f;
@@ -93,7 +93,7 @@ namespace EasyUI
 
         private static void OnRenderingHud(object sender, RenderingHudEventArgs e)
         {
-            if (ModEntry.Config.ShowLocationPopUp || OSDTimer <= 0)
+            if (ModEntry.Config.ShowLocationMessage || OSDTimer <= 0)
                 return;
 
             float scale = 2.0f;

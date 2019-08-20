@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -14,7 +14,7 @@ namespace EasyUI
 {
     internal class ShowItemEffectRanges : IDisposable
     {
-        private readonly List<Point> _effectiveArea = new List<Point>();
+        private readonly List<Point> RangeArea = new List<Point>();
 
         internal ShowItemEffectRanges()
         {
@@ -46,7 +46,7 @@ namespace EasyUI
                 return;
 
             // check draw tile outlines
-            _effectiveArea.Clear();
+            RangeArea.Clear();
 
             // if Left Shift key is pressed, display range of hovered object.
             KeyboardState state = Keyboard.GetState();
@@ -102,7 +102,7 @@ namespace EasyUI
                     for (int jx = 0; jx < 17; ++jx)
                     {
                         if (!(jx == 7 || jx == 8) || !(iy == 7 || iy == 8 || iy == 9))
-                            _effectiveArea.Add(new Point(nextHut.tileX.Value + jx - 8, nextHut.tileY.Value + iy - 8));
+                            RangeArea.Add(new Point(nextHut.tileX.Value + jx - 8, nextHut.tileY.Value + iy - 8));
                     }
                 }
             }
@@ -135,7 +135,7 @@ namespace EasyUI
                     for (int jx = 0; jx < 17; ++jx)
                     {
                         if (Math.Abs(iy - 8) + Math.Abs(jx - 8) <= 12)
-                            _effectiveArea.Add(new Point(tileX + jx - 8, tileY + iy - 8));
+                            RangeArea.Add(new Point(tileX + jx - 8, tileY + iy - 8));
                     }
                 }
             }
@@ -181,7 +181,7 @@ namespace EasyUI
                 for (int jx = 0; jx < rangeMap[iy].Length; ++jx)
                 {
                     if (rangeMap[iy][jx] <= threshhold)
-                        _effectiveArea.Add(new Point(xPos + jx - xOffset, yPos + iy - yOffset));
+                        RangeArea.Add(new Point(xPos + jx - xOffset, yPos + iy - yOffset));
                 }
             }
         }
@@ -195,7 +195,7 @@ namespace EasyUI
                 return;
 
             // draw tile outlines
-            foreach (Point point in _effectiveArea)
+            foreach (Point point in RangeArea)
             Game1.spriteBatch.Draw(
                 Game1.mouseCursors,
                 Game1.GlobalToLocal(new Vector2(point.X * Game1.tileSize, point.Y * Game1.tileSize)),

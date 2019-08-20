@@ -1,16 +1,16 @@
-﻿namespace EasyUI
+namespace EasyUI
 {
     internal static class OptionKeys
     {
         internal const string IconLuckOfDay = "option.ShowLuckIcon";
         internal const string IconBirthday = "option.ShowBirthdayIcon";
-        internal const string IconTodaysRecipe = "option.ShowWhenNewRecipesAreAvailable";
+        internal const string IconNewRecipe = "option.ShowNewRecipeAvailable";
         internal const string IconToolUpgrade = "option.ShowToolUpgradeStatus";
         internal const string IconTravelingMerchant = "option.ShowTravelingMerchant";
 
         internal const string ShowNPCOnMap = "option.ShowLocationOfTownsPeople";
         // internal const string ShowLocationOfTownsPeopleShowQuestIcon = "option.ShowLocationOfTownsPeopleShowQuestIcon";
-        internal const string ShowCalendarAndBillboard = "option.DisplayCalendarAndBillboard";
+        internal const string ShowCalendarAndBillboard = "option.ShowCalendarAndBillboard";
         internal const string ShowHeartFills = "option.ShowHeartFills";
 
         internal const string ShowMonsterHealthBar = "option.ShowMonsterHealthBar";

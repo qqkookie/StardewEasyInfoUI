@@ -5,7 +5,7 @@
     "icon.LuckyButNotTooLucky": "Feelin' lucky... but not too lucky",
     "icon.MaybeStayHome": "Maybe you should stay home today...",
     "icon.NotFeelingLuckyAtAll": "You're not feeling lucky at all today...",
-    "icon.TodaysRecipe": "Today's recipe: ",
+    "icon.TodaysNewRecipe": "Today's new recipe: ",
     "icon.GusIsSellingRecipe": "Gus is selling {0} recipe today!",
     "icon.DaysUntilToolIsUpgraded": "{0} days until {1} is finished upgrade",
     "icon.ToolIsFinishedBeingUpgraded": "{0} is finished",
@@ -44,7 +44,7 @@
     //  Daily icons
     "option.ShowLuckIcon": "Display daily luck icon",
     "option.ShowBirthdayIcon": "Display people's birthday icon",
-    "option.ShowWhenNewRecipesAreAvailable": "Display if new recipes are available",
+    "option.ShowNewRecipeAvailable": "Display if new recipes are available",
     "option.ShowToolUpgradeStatus": "Display tool upgrade status",
     "option.ShowTravelingMerchant": "Display traveling merchant in town",
 

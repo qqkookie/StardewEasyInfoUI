@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.Xna.Framework;
@@ -11,19 +11,19 @@ using StardewModdingAPI.Events;
 
 namespace EasyUI
 {
-    internal class IconTodaysRecipe : IDisposable
+    internal class IconNewRecipe : IDisposable
     {
-        private Dictionary<String, String> _recipesByDescription = new Dictionary<string, string>();
+        private readonly Dictionary<String, String> _recipesByDescription = new Dictionary<string, string>();
         private Dictionary<String, String> _recipes = new Dictionary<String, string>();
         private String _todaysRecipe;
-        private NPC _gus;
+        // private NPC _gus;
         private bool _drawQueenOfSauceIcon = false;
-        private bool _drawDishOfDayIcon = false;
+        // private bool _drawDishOfDayIcon = false;
         private ClickableTextureComponent _queenOfSauceIcon;
         private static IModEvents Events => ModEntry.Events;
         private string _todaysRecipeDisplay;
 
-        internal IconTodaysRecipe()
+        internal IconNewRecipe()
         {
         }
 
@@ -166,6 +166,7 @@ namespace EasyUI
                     _queenOfSauceIcon.draw(Game1.spriteBatch);
                 }
 
+                /*
                 if (_drawDishOfDayIcon)
                 {
                     Point iconLocation = IconHandler.Handler.GetNewIconPosition();
@@ -206,6 +207,7 @@ namespace EasyUI
                             Game1.dialogueFont);
                     }
                 }
+                */
             }
         }
 

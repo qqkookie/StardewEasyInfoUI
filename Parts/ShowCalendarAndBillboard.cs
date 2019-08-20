@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -119,6 +119,8 @@ namespace EasyUI
                         ModEntry.Translation.Get(hoverText),
                         Game1.dialogueFont);
                 }
+
+                Game1.activeClickableMenu.drawMouse(Game1.spriteBatch);
             }
         }
 

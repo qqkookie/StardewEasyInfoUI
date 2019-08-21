@@ -1,4 +1,4 @@
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal static class OptionKeys
     {

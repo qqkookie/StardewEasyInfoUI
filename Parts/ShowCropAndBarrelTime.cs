@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.Xna.Framework;
@@ -11,7 +11,7 @@ using StardewValley.TerrainFeatures;
 using StardewValley.Objects;
 using StardewModdingAPI.Events;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal class ShowCropAndBarrelTime : IDisposable
     {

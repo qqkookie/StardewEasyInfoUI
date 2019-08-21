@@ -15,7 +15,7 @@ using StardewModdingAPI;
 using StardewModdingAPI.Enums;
 using StardewModdingAPI.Events;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal class ExperienceBar : IDisposable
     {

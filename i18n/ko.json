@@ -23,6 +23,7 @@
     "label.bundle-stack": "{0}:  {2} / {1} 개",
     "label.unit-price": "단가: ",
     "label.stack-price": "묶음: ",
+    "label.crafted-count": "제작 갯수: ",
     "label.Days": "일",
     "label.Hours": "시간",
     "label.Minutes": "분",

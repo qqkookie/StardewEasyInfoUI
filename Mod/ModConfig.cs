@@ -1,6 +1,6 @@
 using StardewModdingAPI;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     class ModConfig
     {
@@ -22,8 +22,8 @@ namespace EasyUI
         /// <summary>Monster health bar: Reversed color scheme: red to green</summary>
         public bool ReverseColorScheme { get; set; }
 
-        /// <summary>Show location name: Show location name as HUD message, instead of on screen display.</summary>
-        public bool ShowLocationMessage { get; set; }
+        /// <summary>Show location name: Show location name with on-screen displays or HUD message?</summary>
+        public bool ShowLocationOSD { get; set; } = true;
 
         /// <summary>Show Buried Items: Show buried clay tile.</summary>
         public bool ShowBuriedClay { get; set; }

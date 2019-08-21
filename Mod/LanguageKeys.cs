@@ -1,4 +1,4 @@
-﻿namespace EasyUI
+namespace EasyInfoUI
 {
     internal static class LanguageKeys
     {
@@ -7,7 +7,7 @@
         internal const string MaybeStayHome = "icon.MaybeStayHome";
         internal const string NotFeelingLuckyAtAll = "icon.NotFeelingLuckyAtAll";
         // internal const string IsNPCsBirthday = "icon.IsNPCsBirthday";
-        internal const string TodaysRecipe = "icon.TodaysRecipe";
+        internal const string TodaysRecipe = "icon.TodaysNewRecipe";
         internal const string GusIsSellingRecipe = "icon.GusIsSellingRecipe";
         internal const string DaysUntilToolIsUpgraded = "icon.DaysUntilToolIsUpgraded";
         internal const string ToolIsFinishedBeingUpgraded = "icon.ToolIsFinishedBeingUpgraded";

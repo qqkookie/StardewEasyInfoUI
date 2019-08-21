@@ -1,7 +1,7 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using StardewValley;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal class ExperiencePointDisplay
     {

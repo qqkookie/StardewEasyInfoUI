@@ -7,6 +7,7 @@
     "GusIsSellingRecipe": "Gus is selling {0} recipe today!",
     "TrackOnMap": "Track on map",
     "label.bundle-stack": "{0}: Qty.  {2} / {1}",
+    "label.crafted-count": "Number crafted: ",
     "label.unit-price": "Un seul: ",
     "label.stack-price": "Total: ",
     "Billboard": "Tableau d'annonces",

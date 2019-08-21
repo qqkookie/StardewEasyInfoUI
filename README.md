@@ -1,7 +1,7 @@
-Easy UI by Cookie
+Easy Info UI by Cookie
 ========
 
-This **Easy UI mod** is [Stardew Valley](http://stardewvalley.net/) game mod
+This **Easy Info UI mod** is [Stardew Valley](http://stardewvalley.net/) game mod
 that show many helpful game information on player's UI screen.
 
 It is derived and from hugely popular
@@ -19,13 +19,14 @@ Then, source code was cleaned up and many new features are add by Cookie.
 ## New features and improvements
 
 * In Mine and Skull Cavern, health bar of enemy monster is dispalyed.
-* when player enters a location or map, name of the current location 
-apprars on screen dispaly or as message. 
+* when player enters a location or map, name of the current location
+apprars on screen dispaly or as message.
 * Stamina and health values of plyer are displayed as number.
 * Ground spots where some item is buried are marked. (Winter Root/Snow Yam, Artifact Spot, Mine Ladder)
 * Today's weather (not forcast for tomorrow) and luck are displayed as daily message when new day begins.
 * Weather and Season icons have hover display.
 * Display of bundle pack information of hovered item is improved and localized.
+* On Crafting page, display how many times the item was crafted. (craft counter)
 * Code for effect range display of sprinkler and scarecrow is rewritten.
 * New Recipe name is localized.
 * Translation entries are organized. Many new entires and location names are added.
@@ -44,14 +45,15 @@ Setting                     | Purpose
 `ShowBuriedClay`          | Show Buried Items: Show buried clay tile.
 `ShowMineLadder`          | Show Buried Items: Show mine ladder stone.
 
+
+## TODO
+
 ## Credits
-Source code: [Github repository](https://github.com/qqkookie/StardewEasyUI/)
+Source code: [Github repository](https://github.com/qqkookie/StardewEasyInfoUI/)
 
 This mod is derived ftom [UI Info Suits mod](https://www.nexusmods.com/stardewvalley/mods/1150) by Cdaragorn.
 It is forked from [Github repository](https://github.com/cdaragorn/Ui-Info-Suite)
 around August 2019, based on Version 1.7.23 published on 10 January 2019.
-
-https://github.com/cdaragorn/Ui-Info-Suite
 
 ## Versions
 

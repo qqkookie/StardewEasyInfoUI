@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using StardewValley.Menus;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal static class Utils
     {

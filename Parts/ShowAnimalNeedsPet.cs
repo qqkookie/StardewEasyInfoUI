@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
@@ -8,7 +8,7 @@ using StardewValley.Characters;
 using StardewValley.Network;
 using StardewModdingAPI.Events;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal class ShowAnimalNeedsPet : IDisposable
     {

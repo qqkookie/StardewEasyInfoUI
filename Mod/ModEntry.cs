@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
@@ -7,7 +7,7 @@ using StardewValley;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     public class ModEntry : Mod
     {

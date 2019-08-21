@@ -1,10 +1,10 @@
-﻿{
-    "Name": "Easy UI",
+{
+    "Name": "Easy Info UI",
     "Author": "Cookie",
     "Version": "1.0.0",
     "Description": "Adds many useful information on user interface. Based on Cdaragorn's UI Info Suite",
-    "UniqueID": "Cookie.EasyUI",
-    "EntryDll": "EasyUI.dll",
+    "UniqueID": "Cookie.EasyInfoUI",
+    "EntryDll": "EasyInfoUI.dll",
     "MinimumApiVersion": "2.9.3",
     "UpdateKeys": [ "Nexus:9999" ]
 }

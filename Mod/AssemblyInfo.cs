@@ -1,14 +1,14 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Easy UI")]
-[assembly: AssemblyDescription("UI Info mod for Stardew Valley game")]
+[assembly: AssemblyTitle("Easy Info UI")]
+[assembly: AssemblyDescription("Game Info UI mod for Stardew Valley game")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Easy UI")]
+[assembly: AssemblyProduct("Easy Info UI")]
 [assembly: AssemblyCopyright("Copyright © 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

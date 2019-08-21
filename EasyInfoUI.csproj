@@ -11,8 +11,8 @@
     <ProjectGuid>{7937E493-EB19-436F-9AE6-54BFA3E68C34}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EasyUI</RootNamespace>
-    <AssemblyName>EasyUI</AssemblyName>
+    <RootNamespace>EasyInfoUI</RootNamespace>
+    <AssemblyName>EasyInfoUI</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

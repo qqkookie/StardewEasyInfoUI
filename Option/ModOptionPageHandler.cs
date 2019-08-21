@@ -7,7 +7,7 @@ using StardewValley.Menus;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal class ModOptionPageHandler : IDisposable
     {
@@ -49,7 +49,7 @@ namespace EasyUI
         internal ModOptionPageHandler(IDictionary<String, String> options)
         {
             _options = options;
-           // helper.Events.Display.MenuChanged += ToggleModOptions;
+            Events.Display.MenuChanged += ToggleModOptions;
            // _helper = helper;
            // ModConfig modConfig = _helper.ReadConfig<ModConfig>();
 
@@ -105,7 +105,7 @@ namespace EasyUI
 
             int whichOption = 1001;
             Version thisVersion = Assembly.GetAssembly(this.GetType()).GetName().Version;
-            _optionParts.Add(new ModOptionPart("UI Info Suite v" +
+            _optionParts.Add(new ModOptionPart("Easy Info UI v" +
                 thisVersion.Major + "." + thisVersion.Minor + "." + thisVersion.Build));
             _optionParts.Add(new ModOptionCheckbox(Trans(OptionKeys.IconLuckOfDay), whichOption++, _iconLuckOfDay.Toggle, _options, OptionKeys.IconLuckOfDay));
             _optionParts.Add(new ModOptionCheckbox(Trans(OptionKeys.IconBirthday), whichOption++, _iconBirthday.ToggleOption, _options, OptionKeys.IconBirthday));

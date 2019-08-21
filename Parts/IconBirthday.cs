@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -6,7 +6,7 @@ using StardewValley;
 using StardewValley.Menus;
 using StardewModdingAPI.Events;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal class IconBirthday : IDisposable
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     public interface ILevelExtenderInterface
     {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -8,7 +8,7 @@ using StardewValley.Menus;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal class ShopHarvestPrices : IDisposable
     {

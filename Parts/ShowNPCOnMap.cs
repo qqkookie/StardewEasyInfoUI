@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -12,7 +12,7 @@ using StardewValley.Quests;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal class ShowNPCOnMap : IDisposable
     {

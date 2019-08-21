@@ -7,7 +7,7 @@ using StardewValley.Locations;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal class ShowLocationName
     {
@@ -23,12 +23,16 @@ namespace EasyUI
 
         internal void ToggleOption(bool showLocationName)
         {
-            if (!ModEntry.Config.ShowLocationMessage)
-            {
-                ModEntry.Events.Player.Warped -= OnWarped;
 
+            ModEntry.Events.Player.Warped -= OnWarped;
+            if (showLocationName)
+                ModEntry.Events.Player.Warped += OnWarped;
+
+            if (ModEntry.Config.ShowLocationOSD)
+            {
+                ModEntry.Events.Display.RenderedWorld -= OnRenderedWorld;
                 if (showLocationName)
-                    ModEntry.Events.Player.Warped += OnWarped;
+                    ModEntry.Events.Display.RenderedWorld += OnRenderedWorld;
             }
         }
 
@@ -79,7 +83,7 @@ namespace EasyUI
                 DisplayName = locationName;
                 ModEntry.Logger.Log($"No translation: {DisplayName} for {Translation.Locale}", LogLevel.Info);
             }
-            else if (!ModEntry.Config.ShowLocationMessage)
+            else if (ModEntry.Config.ShowLocationOSD)
             {
                 OSDFont = Game1.smallFont;
                 OSDFont.Spacing = -2f;
@@ -91,9 +95,9 @@ namespace EasyUI
                 Game1.showGlobalMessage(DisplayName);
         }
 
-        private static void OnRenderingHud(object sender, RenderingHudEventArgs e)
+        private static void OnRenderedWorld(object sender, RenderedWorldEventArgs e)
         {
-            if (ModEntry.Config.ShowLocationMessage || OSDTimer <= 0)
+            if (!ModEntry.Config.ShowLocationOSD || OSDTimer <= 0)
                 return;
 
             float scale = 2.0f;

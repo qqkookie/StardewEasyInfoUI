@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 
 using StardewValley;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     public class IconHandler
     {

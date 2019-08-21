@@ -23,6 +23,7 @@
     "label.bundle-stack": "{0}: Qty.  {2} / {1}",
     "label.unit-price": "Unit: ",
     "label.stack-price": "Stack: ",
+    "label.crafted-count": "Number crafted: ",
     "label.Days": "日々",
     "label.Hours": "時間",
     "label.Minutes": "分",

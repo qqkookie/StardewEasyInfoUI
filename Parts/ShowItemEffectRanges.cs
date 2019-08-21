@@ -10,7 +10,7 @@ using StardewValley.Locations;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal class ShowItemEffectRanges : IDisposable
     {

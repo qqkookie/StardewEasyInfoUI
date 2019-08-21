@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 
 using StardewValley;
 using StardewValley.Menus;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal class SkipIntro
     {

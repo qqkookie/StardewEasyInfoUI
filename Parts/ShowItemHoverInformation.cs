@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -10,7 +10,7 @@ using StardewValley.Menus;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     // This source code is based on [Community Bundle Item Tooltip mod](https://www.nexusmods.com/stardewvalley/mods/1329/
     // Source: https://github.com/musbah/StardewValleyMods/blob/master/BundleTooltips/ModEntry.cs
@@ -70,7 +70,7 @@ namespace EasyUI
 
             /// <summary>The cached toolbar instance.</summary>
             Toolbar toolbar = Game1.onScreenMenus.OfType<Toolbar>().FirstOrDefault();
-           
+
             // toolbar.hoverItem is set to null after rendered HUD
             HoveredItem = (toolbar != null) ? Reflection.GetField<Item>(toolbar, "hoverItem").GetValue() : null;
 
@@ -128,6 +128,23 @@ namespace EasyUI
             if (item != null && Game1.activeClickableMenu != null)
                 DrawItemHoverInfo(e.SpriteBatch, item);
 
+            if ((Game1.activeClickableMenu is GameMenu gamemenu) && gamemenu.currentTab == GameMenu.craftingTab)
+            {
+                // Display crafted count of the item
+                CraftingPage craftingPage = (CraftingPage)Reflection.GetField<List<IClickableMenu>>
+                    (gamemenu, "pages", true).GetValue()[GameMenu.craftingTab];
+
+                CraftingRecipe craftingRecipe = Reflection.GetField<CraftingRecipe>
+                    (craftingPage, "hoverRecipe", true).GetValue();
+
+                if (craftingPage != null && craftingRecipe != null)
+                {
+                    Point pos = Game1.getMousePosition();
+                    string desc = ModEntry.Translation.Get("label.crafted-count")       //  "Number crafted: ",
+                         + Game1.player.craftingRecipes[craftingRecipe.name].ToString();
+                    DrawExtraTextBox(Game1.smallFont, desc, pos.X + Game1.tileSize / 2, pos.Y - Game1.tileSize / 2);
+                }
+            }
         }
 
         /// <summary>Get the hovered item from an arbitrary menu.</summary>
@@ -189,8 +206,8 @@ namespace EasyUI
                 string bundleSubName;
 
                 string[] subsplit = keyValuePair.Value.Split('/');
-                bundleSubName = LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.en 
-                    ? subsplit[0]: subsplit[subsplit.Length-1];
+                bundleSubName = LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.en
+                    ? subsplit[0] : subsplit[subsplit.Length - 1];
 
                 int bundleIndex = Convert.ToInt32(split[1]);
                 if (!(bundleIndex >= 23 && bundleIndex <= 26))
@@ -230,7 +247,7 @@ namespace EasyUI
 
         private string GetBundleInfo(Item item)
         {
-            if ( item == null || BundleItemList == null || BundleItemList.Count == 0
+            if (item == null || BundleItemList == null || BundleItemList.Count == 0
                 || Game1.MasterPlayer.mailReceived.Contains("JojaMember"))
                 return String.Empty;
 
@@ -370,7 +387,7 @@ namespace EasyUI
                 unitPrice = itemPrice.ToString();
 
                 // get dimensions
-                float coin = coinSourceRect.Width * Game1.pixelZoom + padding +12;
+                float coin = coinSourceRect.Width * Game1.pixelZoom + padding + 12;
                 lineSize = font.MeasureString(unitLabel + unitPrice);
                 innerSize.X = Math.Max(innerSize.X, lineSize.X + coin);
                 innerSize.Y += lineSize.Y;
@@ -388,7 +405,7 @@ namespace EasyUI
                 return;
 
             // box margins
-            Vector2 outerSize = innerSize + new Vector2(margin* 2.2f, margin *1.7f);
+            Vector2 outerSize = innerSize + new Vector2(margin * 2.2f, margin * 1.7f);
 
             // get tooltip position
             int outx = (int)(Mouse.GetState().X / Game1.options.zoomLevel) + offsetFromCursor.X - (int)outerSize.X;
@@ -429,7 +446,7 @@ namespace EasyUI
         }
 
         // Draw one price line
-        private void DrawPriceLine(Vector2 linePos, Vector2 innerSize, string label, string price )
+        private void DrawPriceLine(Vector2 linePos, Vector2 innerSize, string label, string price)
         {
             // label
             Utility.drawTextWithShadow(spriteBatch, label, font, new Vector2(linePos.X, linePos.Y), Game1.textColor);
@@ -440,6 +457,28 @@ namespace EasyUI
             // price
             linePos.X -= font.MeasureString(price).X + padding;
             Utility.drawTextWithShadow(spriteBatch, price, font, linePos, Game1.textColor);
+        }
+
+        // Draw small text box
+        private void DrawExtraTextBox(SpriteFont font, string description, int x, int y)
+        {
+            Vector2 txtSize = font.MeasureString(description);
+            int width = (int)txtSize.X + Game1.tileSize / 2 + 40;
+            int height = (int)txtSize.Y + Game1.tileSize / 3 + 5;
+            if (x < 0)
+                x = 0;
+
+            int vpHeight = Game1.graphics.GraphicsDevice.Viewport.Height;
+
+            if (y + height > vpHeight)
+                y = vpHeight - height;
+
+            IClickableMenu.drawTextureBox(Game1.spriteBatch, Game1.menuTexture,
+                new Rectangle(0, 256, 60, 60), x, y, width, height, Color.White, 1f, true);
+
+            Utility.drawTextWithShadow(Game1.spriteBatch, description, font,
+                new Vector2((x + Game1.tileSize / 4), (y + Game1.tileSize / 4)),
+                Game1.textColor, 1f, -1f, -1, -1, 1f, 3);
         }
     }
 }

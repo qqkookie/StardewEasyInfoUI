@@ -9,7 +9,7 @@ using StardewValley.Menus;
 using StardewValley.Objects;
 using StardewModdingAPI.Events;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal class IconNewRecipe : IDisposable
     {

@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 
 using StardewValley;
 using StardewValley.Menus;
 using StardewModdingAPI.Events;
 
-namespace EasyUI
+namespace EasyInfoUI
 {
     internal class IconTravelingMerchant : IDisposable
     {

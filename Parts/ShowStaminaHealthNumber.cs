@@ -19,7 +19,7 @@ namespace EasyInfoUI
         }
 
         internal void ToggleOption(bool showStaminaAndHealth)
-        { 
+        {
             ModEntry.Events.Display.RenderedHud -= OnRendereHud;
 
             if (showStaminaAndHealth)

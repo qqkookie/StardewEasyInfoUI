@@ -23,7 +23,7 @@
     "label.bundle-stack": "{0}: Qty.  {2} / {1}",
     "label.unit-price": "Einzeln: ",
     "label.stack-price": "Stapel: ",
-    "label.crafted-count": "Number crafted: ",
+    "label.crafted-count": "Times crafted: ",
     "label.Days": "Tage",
     "label.Hours": "Stunden",
     "label.Minutes": "Minuten",

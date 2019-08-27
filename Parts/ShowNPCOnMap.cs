@@ -187,7 +187,7 @@ namespace EasyInfoUI
                     bool optionForThisFriend = true;
                     if (Game1.player.friendshipData.ContainsKey(friendName))
                     {
-                        optionForThisFriend = _options.SafeGet(key).SafeParseBool(true);   
+                        optionForThisFriend = _options.SafeGet(key).SafeParseBool(true);
                     }
                     else
                     {
@@ -226,7 +226,7 @@ namespace EasyInfoUI
                     {
                         checkbox.isChecked = !checkbox.isChecked;
                         _options[OptionKey(checkbox.whichOption)] = checkbox.isChecked.ToString();
-                          
+
                         Game1.playSound("drumkit6");
                     }
                 }
@@ -466,11 +466,11 @@ namespace EasyInfoUI
             if (Game1.activeClickableMenu is GameMenu gameMenu && gameMenu.currentTab == 2)
             {
                 Game1.drawDialogueBox(
-                    Game1.activeClickableMenu.xPositionOnScreen - SocialPanelXOffset, 
-                    Game1.activeClickableMenu.yPositionOnScreen, 
-                    SocialPanelWidth, 
-                    Game1.activeClickableMenu.height, 
-                    false, 
+                    Game1.activeClickableMenu.xPositionOnScreen - SocialPanelXOffset,
+                    Game1.activeClickableMenu.yPositionOnScreen,
+                    SocialPanelWidth,
+                    Game1.activeClickableMenu.height,
+                    false,
                     true);
 
                 int slotPosition = (int)typeof(SocialPage)
@@ -490,25 +490,25 @@ namespace EasyInfoUI
                     Color color = checkbox.isChecked ? Color.White : Color.Gray;
 
                     Game1.spriteBatch.Draw(
-                        Game1.mouseCursors, 
-                        new Vector2(checkbox.bounds.X - 50, checkbox.bounds.Y), 
-                        new Rectangle(80, 0, 16, 16), 
+                        Game1.mouseCursors,
+                        new Vector2(checkbox.bounds.X - 50, checkbox.bounds.Y),
+                        new Rectangle(80, 0, 16, 16),
                         color,
-                        0.0f, 
-                        Vector2.Zero, 
-                        3f, 
-                        SpriteEffects.None, 
+                        0.0f,
+                        Vector2.Zero,
+                        3f,
+                        SpriteEffects.None,
                         1f);
 
                     if (yOffset != 560)
                     {
                         Game1.spriteBatch.Draw(
-                            Game1.staminaRect, 
+                            Game1.staminaRect,
                             new Rectangle(
-                                checkbox.bounds.X - 50, 
-                                checkbox.bounds.Y + 72, 
-                                SocialPanelWidth / 2 - 6, 
-                                4), 
+                                checkbox.bounds.X - 50,
+                                checkbox.bounds.Y + 72,
+                                SocialPanelWidth / 2 - 6,
+                                4),
                             Color.SaddleBrown);
 
                         Game1.spriteBatch.Draw(

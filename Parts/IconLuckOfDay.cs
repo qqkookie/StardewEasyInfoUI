@@ -44,7 +44,7 @@ namespace EasyInfoUI
         internal IconLuckOfDay()
         {
             for (int ii = 0; ii < WeatherDisplay.Length; ii++)
-                WeatherDisplay[ii] = Translation.Get(WeatherDisplay[ii]);            
+                WeatherDisplay[ii] = Translation.Get(WeatherDisplay[ii]);
         }
 
         public void Dispose()
@@ -113,7 +113,7 @@ namespace EasyInfoUI
 
             if (weatherIconbox.Contains(Game1.getMouseX(), Game1.getMouseY()))
             {
-                string weather = "  " + WeatherDisplay[Game1.weatherIcon] + "   "; 
+                string weather = "  " + WeatherDisplay[Game1.weatherIcon] + "   ";
                 IClickableMenu.drawHoverText(e.SpriteBatch, weather, Game1.smallFont);
             }
             else if (seasonIconbox.Contains(Game1.getMouseX(), Game1.getMouseY()))
@@ -220,7 +220,7 @@ namespace EasyInfoUI
                     weather = Game1.content.LoadString("Strings\\StringsFromCSFiles:TV.cs.13187");
                 else if (Game1.currentSeason.Equals("winter"))
                     weather = Game1.content.LoadString("Strings\\StringsFromCSFiles:TV.cs.13190");
-                else 
+                else
                     weather = Game1.content.LoadString("Strings\\StringsFromCSFiles:TV.cs.13189");
             }
             else
@@ -230,7 +230,7 @@ namespace EasyInfoUI
                 else
                     weather = Game1.content.LoadString("Strings\\StringsFromCSFiles:TV.cs.13182");
             }
-            
+
             string tomorrow = Translation.Get("weather.tomorrow");
             string today = Translation.Get("weather.today");
             if (!string.IsNullOrEmpty(tomorrow) && !string.IsNullOrEmpty(today) && weather.Contains(tomorrow))

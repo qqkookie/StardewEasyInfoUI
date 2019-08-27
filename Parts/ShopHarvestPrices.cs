@@ -50,16 +50,16 @@ namespace EasyInfoUI
                         hoverItem.Name != "Mixed Seeds" &&
                         hoverItem.Name != "Winter Seeds")
                     {
-                        StardewValley.Object temp = 
+                        StardewValley.Object temp =
                             new StardewValley.Object(
                                 new Debris(
                                     new Crop(
-                                        hoverItem.ParentSheetIndex, 
-                                        0, 
+                                        hoverItem.ParentSheetIndex,
+                                        0,
                                         0)
-                                        .indexOfHarvest.Value, 
-                                    Game1.player.position, 
-                                    Game1.player.position).chunkType.Value, 
+                                        .indexOfHarvest.Value,
+                                    Game1.player.position,
+                                    Game1.player.position).chunkType.Value,
                                 1);
                         text = "    " + temp.Price;
                     }

@@ -14,11 +14,11 @@ namespace EasyInfoUI
 {
     internal class ShowCalendarAndBillboard : IDisposable
     {
-        private ClickableTextureComponent _showBillboardButton = 
+        private ClickableTextureComponent _showBillboardButton =
             new ClickableTextureComponent(
-                new Rectangle(0, 0, 99, 60), 
-                Game1.content.Load<Texture2D>(Path.Combine("Maps", "summer_town")), 
-                new Rectangle(122, 291, 35, 20), 
+                new Rectangle(0, 0, 99, 60),
+                Game1.content.Load<Texture2D>(Path.Combine("Maps", "summer_town")),
+                new Rectangle(122, 291, 35, 20),
                 3f);
 
         private static IModEvents Events => ModEntry.Events;
@@ -111,8 +111,8 @@ namespace EasyInfoUI
                 _showBillboardButton.draw(Game1.spriteBatch);
                 if (_showBillboardButton.containsPoint(Game1.getMouseX(), Game1.getMouseY()))
                 {
-                    String hoverText = Game1.getMouseX() < 
-                        _showBillboardButton.bounds.X + _showBillboardButton.bounds.Width / 2 ? 
+                    String hoverText = Game1.getMouseX() <
+                        _showBillboardButton.bounds.X + _showBillboardButton.bounds.Width / 2 ?
                         LanguageKeys.Calendar : LanguageKeys.Billboard;
                     IClickableMenu.drawHoverText(
                         Game1.spriteBatch,

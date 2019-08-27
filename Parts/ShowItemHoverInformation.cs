@@ -53,12 +53,14 @@ namespace EasyInfoUI
         {
             Events.GameLoop.UpdateTicked -= OnUpdateTicked;
             Events.Display.RenderedHud -= OnRenderedHudEvent;
+            //Events.Display.RenderingActiveMenu -= OnRenderingActiveMenu;
             Events.Display.RenderedActiveMenu -= OnRenderedActiveMenu;
 
             if (showBundle)
             {
                 Events.GameLoop.UpdateTicked += OnUpdateTicked;
                 Events.Display.RenderedHud += OnRenderedHudEvent;
+                //Events.Display.RenderingActiveMenu += OnRenderingActiveMenu;
                 Events.Display.RenderedActiveMenu += OnRenderedActiveMenu;
             }
         }
@@ -76,7 +78,7 @@ namespace EasyInfoUI
 
         }
 
-        /// <summary>Raised after drawing the HUD (item toolbar, clock, etc) to the sprite batch, 
+        /// <summary>Raised after drawing the HUD (item toolbar, clock, etc) to the sprite batch,
         /// but before it's rendered to the screen. The vanilla HUD may be hidden at this point (e.g. because a menu is open).</summary>
         private void OnRenderedHudEvent(object sender, RenderedHudEventArgs e)
         {
@@ -106,7 +108,7 @@ namespace EasyInfoUI
             // get hovered item
             return Game1.player.Items[index];
         }
-        
+
         private Item GetHoveredItemFromToolbar()
         {
             foreach (IClickableMenu menu in Game1.onScreenMenus)
@@ -137,12 +139,43 @@ namespace EasyInfoUI
                 CraftingRecipe craftingRecipe = Reflection.GetField<CraftingRecipe>
                     (craftingPage, "hoverRecipe", true).GetValue();
 
-                if (craftingPage != null && craftingRecipe != null)
+                if (craftingPage != null && craftingRecipe != null && craftingRecipe.timesCrafted > 0)
                 {
+                    /*
                     Point pos = Game1.getMousePosition();
                     string desc = ModEntry.Translation.Get("label.crafted-count")       //  "Number crafted: ",
                          + Game1.player.craftingRecipes[craftingRecipe.name].ToString();
                     DrawExtraTextBox(Game1.smallFont, desc, pos.X + Game1.tileSize / 2, pos.Y - Game1.tileSize / 2);
+                    */
+
+                    var recipeDescr = Reflection.GetField<string>(craftingRecipe, "description", true);
+                    string desc = recipeDescr.GetValue();
+                    string label = ModEntry.Translation.Get("label.crafted-count");       //  "Times crafted: ",
+                    // + Game1.player.craftingRecipes[craftingRecipe.name]
+                    if (!desc.Contains(label))
+                    {
+                        desc += "\n" + label + craftingRecipe.timesCrafted.ToString();
+                        recipeDescr.SetValue(desc);
+                    }
+
+                    bool held = Reflection.GetField<Item>(craftingPage, "heldItem", true).GetValue() != null;
+                    int xOffset = held ? Game1.tileSize * 3 / 4 : 0;
+                    int yOffset = held ? Game1.tileSize * 3 / 4 : 0;
+
+                    bool cooking = Reflection.GetField<bool>(craftingPage, "cooking", true).GetValue();
+                    Item lastCookingHover = Reflection.GetField<Item>(craftingPage, "lastCookingHover", true).GetValue();
+
+                    string[] infos = null;
+                    if (cooking && lastCookingHover != null)
+                        infos = Game1.objectInformation[(lastCookingHover as StardewValley.Object).ParentSheetIndex].Split('/');
+
+                    string[] buffs = null;
+                    if ( infos != null && infos.Length > 7)
+                        buffs = infos[7].Split(' ');
+
+                    IClickableMenu.drawHoverText(e.SpriteBatch, " ", Game1.smallFont, xOffset, yOffset,
+                        -1, craftingRecipe.DisplayName, -1, buffs, lastCookingHover,
+                        0, -1, -1, -1, -1, 1.0f, craftingRecipe);
                 }
             }
         }
@@ -459,7 +492,9 @@ namespace EasyInfoUI
             Utility.drawTextWithShadow(spriteBatch, price, font, linePos, Game1.textColor);
         }
 
+        /*
         // Draw small text box
+        [Obsolete("Not used anymore")]
         private void DrawExtraTextBox(SpriteFont font, string description, int x, int y)
         {
             Vector2 txtSize = font.MeasureString(description);
@@ -480,6 +515,7 @@ namespace EasyInfoUI
                 new Vector2((x + Game1.tileSize / 4), (y + Game1.tileSize / 4)),
                 Game1.textColor, 1f, -1f, -1, -1, 1f, 3);
         }
+        */
     }
 }
 
@@ -1473,7 +1509,7 @@ namespace StardewValleyBundleTooltips
         /// <summary>The method invoked when the player presses a keyboard button.</summary>
         /// <param name="sender">The event sender.</param>
         /// <param name="e">The event data.</param>
-        /// 
+        ///
         private void SaveEvents_AfterLoad(object sender, SaveLoadedEventArgs e)
         {
             //This will be filled with the itemIDs of every item in every bundle (for a fast search without details)
@@ -1577,7 +1613,7 @@ namespace StardewValleyBundleTooltips
                         tooltipText += "\n    " + value;
                     }
                     count++;
-                    
+
                 }
 
                 this.DrawHoverTextBox(Game1.smallFont, tooltipText, isItFromToolbar , item.Stack);
@@ -1631,7 +1667,7 @@ namespace StardewValleyBundleTooltips
                     y += 95;
                 else
                     y += 55;
-            }   
+            }
 
             if (x < 0)
                 x = 0;
@@ -1697,7 +1733,7 @@ namespace StardewValleyBundleTooltips
                     //creating an array of items[i][j] , i is the item index, j=0 itemId, j=1 itemAmount, j=2 itemQuality, j=3 order of the item for it's own bundle
                     string[] allItems = keyValuePair.Value.Split('/')[2].Split(' ');
                     int allItemsLength = allItems.Length / 3;
-                    
+
                     int[][] items = new int[allItemsLength][];
 
                     int j = 0;

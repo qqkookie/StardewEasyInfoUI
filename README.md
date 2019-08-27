@@ -19,17 +19,17 @@ Then, source code was cleaned up and many new features are add by Cookie.
 ## New features and improvements
 
 * In Mine and Skull Cavern, health bar of enemy monster is dispalyed.
-* when player enters a location or map, name of the current location
-apprars on screen dispaly or as message.
+* When player enters a location or indoor, name of the current location
+is displayed as on-screen dispaly or as message.
 * Stamina and health values of plyer are displayed as number.
 * Ground spots where some item is buried are marked. (Winter Root/Snow Yam, Artifact Spot, Mine Ladder)
-* Today's weather (not forcast for tomorrow) and luck are displayed as daily message when new day begins.
-* Weather and Season icons have hover display.
-* Display of bundle pack information of hovered item is improved and localized.
-* On Crafting page, display how many times the item was crafted. (craft counter)
+* When new day breaks, today's weather (not forcast for tomorrow) and today's luck are displayed as daily message.
+* Weather and Season icons on upper right corner shows hovering description.
+* When hovering on item, displaying bundle pack information is improved and localized.
+* On hovering Crafting page, it shows how many times the item was crafted. (craft counter)
 * Code for effect range display of sprinkler and scarecrow is rewritten.
-* New Recipe name is localized.
-* Translation entries are organized. Many new entires and location names are added.
+* Today's New Recipe name is localized.
+* Orgnization of translation entries are improved. Many new entires and location names are added.
 * Option save format improved for tracking NPC on map.
 
 ## Configure

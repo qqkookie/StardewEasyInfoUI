@@ -15,7 +15,7 @@ namespace EasyInfoUI
         private static Texture2D BarBorder;
 
         /// <summary>HP bar color scheme</summary>
-        private static Color[] ColorScheme = 
+        private static Color[] ColorScheme =
             { Color.LawnGreen, Color.YellowGreen, Color.Gold, Color.DarkOrange, Color.Crimson };
 
         internal ShowMonsterHealthBar()
@@ -134,7 +134,7 @@ namespace EasyInfoUI
             else if (hpRatio > 0.15f) return ColorScheme[3];
             else return ColorScheme[4];
         }
-   
+
         private static void OnRenderedWorld(object sender, RenderedWorldEventArgs e)
         {
             if (Game1.eventUp || !Game1.showingHealth || Game1.currentLocation == null)
@@ -162,7 +162,7 @@ namespace EasyInfoUI
             foreach (NPC character in Game1.currentLocation.characters)
             {
                 // Visible monsters only
-                if (!(character is Monster monster) || monster.IsInvisible || 
+                if (!(character is Monster monster) || monster.IsInvisible ||
                     ! Utility.isOnScreen(monster.position, 3 * Game1.tileSize))
                     continue;
 
@@ -181,7 +181,7 @@ namespace EasyInfoUI
                 //  Display background of the bar
                 Rectangle bgBox = new Rectangle(0, SPRITE_HEIGHT * SPRITE_BACK, BarBorder.Width, SPRITE_HEIGHT);
 
-                Sb.Draw( BarBorder, BarCenter, bgBox, Color.White * 1f, 0f, 
+                Sb.Draw( BarBorder, BarCenter, bgBox, Color.White * 1f, 0f,
                     new Vector2(BarBorder.Width / 2, SPRITE_HEIGHT / 2), 1f, SpriteEffects.None, 0f);
 
                 String healthText = "???";
@@ -223,7 +223,7 @@ namespace EasyInfoUI
 
                 Sb.DrawString( txtFont, healthText, BarCenter, txtColor, 0f,
                     textPos, TXT_SCALE, SpriteEffects.None, 0f);
-  
+
                 //Display foreground of the bar
                 Rectangle fgBox = new Rectangle(0, SPRITE_HEIGHT * SPRITE_FRONT, BarBorder.Width, SPRITE_HEIGHT);
                 Vector2 fgPos = new Vector2(BarBorder.Width / 2f, SPRITE_HEIGHT / 2f);

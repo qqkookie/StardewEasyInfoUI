@@ -7,7 +7,7 @@
     "icon.GusIsSellingRecipe": "Gus is selling {0} recipe today!",
     "TrackOnMap": "Track on map",
     "label.bundle-stack": "{0}: Qty.  {2} / {1}",
-    "label.crafted-count": "Number crafted: ",
+    "label.crafted-count": "Times crafted: ",
     "label.unit-price": "Una unidad: ",
     "label.stack-price": "Montón: ",
     "Billboard": "Tablón de anuncios",

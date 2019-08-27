@@ -169,7 +169,7 @@ namespace EasyInfoUI
             new byte[] { 8, 8, 8, 8, 8, 8, 8, 8, 8, },
         };
 
-        // quality = 0 ~ 3 for normal, quality, iridium and prismatic sprinkler, 
+        // quality = 0 ~ 3 for normal, quality, iridium and prismatic sprinkler,
         private void HighlightedArea(int xPos, int yPos, byte[][] rangeMap, int quality)
         {
             byte threshhold = (byte)quality;

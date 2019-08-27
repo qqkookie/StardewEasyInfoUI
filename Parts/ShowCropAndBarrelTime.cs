@@ -148,13 +148,13 @@ namespace EasyInfoUI
                 {
                     StringBuilder hoverText = new StringBuilder();
                     hoverText.AppendLine(_currentTile.heldObject.Value.DisplayName);
-                    
+
                     if (_currentTile is Cask)
                     {
                         Cask currentCask = _currentTile as Cask;
                         // hoverText.Append((int)(currentCask.daysToMature.Value / currentCask.agingRate.Value))
                         //     .Append(" " + _helper.SafeGetString( LanguageKeys.DaysToMature));
-                        hoverText.Append( String.Format(Trans(LanguageKeys.DaysToMature), 
+                        hoverText.Append( String.Format(Trans(LanguageKeys.DaysToMature),
                             (int)(currentCask.daysToMature.Value / currentCask.agingRate.Value)));
                     }
                     else

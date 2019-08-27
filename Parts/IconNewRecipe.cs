@@ -106,7 +106,7 @@ namespace EasyInfoUI
             String[] splitValues = null;
             String key = null;
             bool checkCraftingRecipes = true;
-            
+
             if (String.IsNullOrEmpty(recipeValue))
             {
                 recipeValue = _recipes["1"];
@@ -250,7 +250,7 @@ namespace EasyInfoUI
                 Game1.player.cookingRecipes.Remove(_todaysRecipe);
 
             _drawQueenOfSauceIcon = (Game1.dayOfMonth % 7 == 0 || (Game1.dayOfMonth - 3) % 7 == 0) &&
-                Game1.stats.DaysPlayed > 5 && 
+                Game1.stats.DaysPlayed > 5 &&
                 !Game1.player.knowsRecipe(_todaysRecipe);
             //_drawDishOfDayIcon = !Game1.player.knowsRecipe(Game1.dishOfTheDay.Name);
 

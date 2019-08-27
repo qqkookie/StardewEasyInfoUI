@@ -60,11 +60,11 @@ namespace EasyInfoUI
             if (!Game1.eventUp && _travelingMerchantIsHere)
             {
                 Point iconPosition = IconHandler.Handler.GetNewIconPosition();
-                _travelingMerchantIcon = 
+                _travelingMerchantIcon =
                     new ClickableTextureComponent(
-                        new Rectangle(iconPosition.X, iconPosition.Y, 40, 40), 
-                        Game1.mouseCursors, 
-                        new Rectangle(192, 1411, 20, 20), 
+                        new Rectangle(iconPosition.X, iconPosition.Y, 40, 40),
+                        Game1.mouseCursors,
+                        new Rectangle(192, 1411, 20, 20),
                         2f);
                 _travelingMerchantIcon.draw(Game1.spriteBatch);
             }

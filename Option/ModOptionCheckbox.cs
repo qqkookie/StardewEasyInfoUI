@@ -18,13 +18,13 @@ namespace EasyInfoUI
         private readonly String _optionKey;
 
         internal ModOptionCheckbox(
-            String label, 
-            int whichOption, 
-            Action<bool> toggleOptionDelegate, 
-            IDictionary<String, String> options, 
-            String optionKey, 
-            bool defaultValue = true, 
-            int x = -1, 
+            String label,
+            int whichOption,
+            Action<bool> toggleOptionDelegate,
+            IDictionary<String, String> options,
+            String optionKey,
+            bool defaultValue = true,
+            int x = -1,
             int y = -1)
             : base(label, x, y, PixelSize * Game1.pixelZoom, PixelSize * Game1.pixelZoom, whichOption)
         {

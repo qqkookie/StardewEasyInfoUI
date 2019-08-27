@@ -67,12 +67,12 @@ namespace EasyInfoUI
             }
             else
             {
-                Utility.drawTextWithShadow(batch, 
-                    _label, 
-                    Game1.dialogueFont, 
-                    new Vector2(slotX + _bounds.X + _bounds.Width + Game1.pixelZoom * 2, slotY + _bounds.Y), 
-                    _canClick ? Game1.textColor : Game1.textColor * 0.33f, 
-                    1f, 
+                Utility.drawTextWithShadow(batch,
+                    _label,
+                    Game1.dialogueFont,
+                    new Vector2(slotX + _bounds.X + _bounds.Width + Game1.pixelZoom * 2, slotY + _bounds.Y),
+                    _canClick ? Game1.textColor : Game1.textColor * 0.33f,
+                    1f,
                     0.1f);
             }
         }

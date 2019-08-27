@@ -29,7 +29,7 @@ namespace EasyInfoUI
             int xPosition = Utils.GetWidthInPlayArea() - 70 - 48 * _amountOfVisibleIcons;
             if (Game1.player.questLog.Any())
                 xPosition -= 65;
-            
+
             ++_amountOfVisibleIcons;
             return new Point(xPosition, yPos);
         }

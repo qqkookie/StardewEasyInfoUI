@@ -61,7 +61,7 @@ namespace EasyInfoUI
 
         private void UpdateToolInfo()
         {
-            // 
+            //
             if (Game1.player.toolBeingUpgraded.Value != null)
             {
                 _toolBeingUpgraded = Game1.player.toolBeingUpgraded.Value;
@@ -115,7 +115,7 @@ namespace EasyInfoUI
             {
                 _toolBeingUpgraded = null;
             }
-            
+
         }
 
         /// <summary>Raised before drawing the HUD (item toolbar, clock, etc) to the screen. The vanilla HUD may be hidden at this point (e.g. because a menu is open). Content drawn to the sprite batch at this point will appear under the HUD.</summary>

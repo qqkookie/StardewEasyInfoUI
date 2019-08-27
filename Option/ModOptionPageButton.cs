@@ -63,8 +63,8 @@ namespace EasyInfoUI
             //{
             //    _hasClicked = false;
             //}
-            //else if ((Game1.activeClickableMenu as GameMenu).currentTab != 3 && 
-            //    isWithinBounds(e.NewPosition.X, e.NewPosition.Y) && 
+            //else if ((Game1.activeClickableMenu as GameMenu).currentTab != 3 &&
+            //    isWithinBounds(e.NewPosition.X, e.NewPosition.Y) &&
             //    !_hasClicked)
             //{
             //    receiveLeftClick(e.NewPosition.X, e.NewPosition.Y);
@@ -76,23 +76,23 @@ namespace EasyInfoUI
         {
             base.draw(b);
 
-            Game1.spriteBatch.Draw(Game1.mouseCursors, 
-                new Vector2(xPositionOnScreen, yPositionOnScreen), 
-                new Rectangle(16, 368, 16, 16), 
-                Color.White, 
-                0.0f, 
-                Vector2.Zero, 
-                Game1.pixelZoom, 
+            Game1.spriteBatch.Draw(Game1.mouseCursors,
+                new Vector2(xPositionOnScreen, yPositionOnScreen),
+                new Rectangle(16, 368, 16, 16),
+                Color.White,
+                0.0f,
+                Vector2.Zero,
+                Game1.pixelZoom,
                 SpriteEffects.None,
                 0.1f);
 
-            b.Draw(Game1.mouseCursors, 
-                new Vector2(xPositionOnScreen + 8, yPositionOnScreen + 14), 
-                new Rectangle(32, 672, 16, 16), 
-                Color.White, 
-                0.0f, 
-                Vector2.Zero, 
-                3f, 
+            b.Draw(Game1.mouseCursors,
+                new Vector2(xPositionOnScreen + 8, yPositionOnScreen + 14),
+                new Rectangle(32, 672, 16, 16),
+                Color.White,
+                0.0f,
+                Vector2.Zero,
+                3f,
                 SpriteEffects.None,
                 0.1f);
 

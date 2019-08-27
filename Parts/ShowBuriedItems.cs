@@ -19,7 +19,7 @@ namespace EasyInfoUI
         private Dictionary<Vector2, Color> BuriedItems = new Dictionary<Vector2, Color>();
         private Texture2D pixelTexture;
         private bool Changed = true;
-        
+
         internal ShowBuriedItems()
         {
             Color[] array = Enumerable.Range(0, 1).Select(i => Color.White).ToArray();
@@ -45,7 +45,7 @@ namespace EasyInfoUI
                 Events.World.ObjectListChanged += this.OnBuriedChanged;
                 Events.GameLoop.UpdateTicked += this.OnUpdateTicked;
                 Events.Display.RenderedWorld += OnRenderedWorld;
-            }   
+            }
         }
 
         public void Dispose()
@@ -104,7 +104,7 @@ namespace EasyInfoUI
                     if (obj.Value.Name == "Stone")
                     {
                         // ladder chance calculation taken from checkStoneForItems function in MineShaft class
-                        Random rng = new Random( (int)obj.Key.X * 1000 + (int)obj.Key.Y 
+                        Random rng = new Random( (int)obj.Key.X * 1000 + (int)obj.Key.Y
                             + Game1.mine.mineLevel + (int)Game1.uniqueIDForThisGame / 2);
                         rng.NextDouble();
                         double chance = 0.02 + 1.0 / (double)Math.Max(1, stoneLeft)
@@ -140,7 +140,7 @@ namespace EasyInfoUI
                         }
                         else if (outdoorwinter)
                         {
-                            Random rng = new Random(jx * 2000 + iy * 77 + (int)Game1.uniqueIDForThisGame / 2 
+                            Random rng = new Random(jx * 2000 + iy * 77 + (int)Game1.uniqueIDForThisGame / 2
                                 + (int)Game1.stats.DaysPlayed + (int)Game1.stats.DirtHoed);
 
                             if (!loc.IsFarm && Game1.currentSeason.Equals("winter") && rng.NextDouble() < 0.08)
@@ -169,7 +169,7 @@ namespace EasyInfoUI
 
             foreach (var item in this.BuriedItems)
             {
-                Rectangle rect = new Rectangle((int)(item.Key.X * Game1.tileSize - Game1.viewport.X), 
+                Rectangle rect = new Rectangle((int)(item.Key.X * Game1.tileSize - Game1.viewport.X),
                     (int)(item.Key.Y * Game1.tileSize - Game1.viewport.Y), Game1.tileSize, Game1.tileSize);
 
                 this.DrawRectangle(Game1.spriteBatch, rect, item.Value);

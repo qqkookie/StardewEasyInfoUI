@@ -24,9 +24,9 @@
     "label.unit-price": "단가: ",
     "label.stack-price": "묶음: ",
     "label.crafted-count": "제작 횟수: ",
-    "label.Days": "일",
-    "label.Hours": "시간",
-    "label.Minutes": "분",
+    "label.days": "일",
+    "label.hours": "시간",
+    "label.minutes": "분",
 
     // Weather Display
     "weather.today-weather": "오늘의 날씨",

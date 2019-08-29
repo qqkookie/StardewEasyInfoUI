@@ -22,8 +22,8 @@ namespace EasyInfoUI
         internal const string DaysToMature = "label.DaysToMature";
         internal const string ReadyToHarvest = "label.ReadyToHarvest";
 
-        internal const string Days = "label.Days";
-        internal const string Hours = "label.Hours";
-        internal const string Minutes = "label.Minutes";
+        // internal const string Days = "label.days";
+        // internal const string Hours = "llabel.hour";
+        // internal const string Minutes = "label.minutes";
     }
 }

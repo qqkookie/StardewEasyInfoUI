@@ -35,7 +35,9 @@ namespace EasyInfoUI
             if (!_options.ContainsKey(_optionKey))
                 _options[_optionKey] = defaultValue.ToString();
 
-            _isChecked = _options[_optionKey].SafeParseBool();
+            _isChecked = (bool.TryParse(_options[_optionKey], out bool result))
+                ? result : false;
+
             _toggleOptionsDelegate(_isChecked);
         }
 

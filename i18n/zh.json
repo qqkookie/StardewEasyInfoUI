@@ -24,9 +24,9 @@
     "label.unit-price": "单个物品: ",
     "label.stack-price": "堆叠的所有物品: ",
     "label.crafted-count": "Times crafted: ",
-    "label.Days": "天",
-    "label.Hours": "小时",
-    "label.Minutes": "分钟",
+    "label.days": "天",
+    "label.hours": "小时",
+    "label.minutes": "分钟",
 
     // --- Config Strings ---
     //  Daily icons

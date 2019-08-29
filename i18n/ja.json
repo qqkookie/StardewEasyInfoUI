@@ -24,9 +24,9 @@
     "label.unit-price": "Unit: ",
     "label.stack-price": "Stack: ",
     "label.crafted-count": "Times crafted: ",
-    "label.Days": "日々",
-    "label.Hours": "時間",
-    "label.Minutes": "分",
+    "label.days": "日々",
+    "label.hours": "時間",
+    "label.minutes": "分",
 
     // --- Config Strings ---
     //  Daily icons

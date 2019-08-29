@@ -244,7 +244,10 @@ namespace EasyInfoUI
             String[] recipes = typeof(TV).GetMethod("getWeeklyRecipe", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(tv, null) as String[];
             //String[] recipe = GetTodaysRecipe();
             //_todaysRecipe = recipe[1];
-            _todaysRecipe = _recipesByDescription.SafeGet(recipes[0]);
+
+            _todaysRecipe = String.Empty;
+            if (_recipesByDescription.TryGetValue(recipes[0], out string value))
+                _todaysRecipe = value;
 
             if (Game1.player.cookingRecipes.Count() > numRecipesKnown)
                 Game1.player.cookingRecipes.Remove(_todaysRecipe);

@@ -24,9 +24,9 @@
     "label.unit-price": "Einzeln: ",
     "label.stack-price": "Stapel: ",
     "label.crafted-count": "Times crafted: ",
-    "label.Days": "Tage",
-    "label.Hours": "Stunden",
-    "label.Minutes": "Minuten",
+    "label.days": "Tage",
+    "label.hours": "Stunden",
+    "label.minutes": "Minuten",
 
     // --- Config Strings ---
     //  Daily icons

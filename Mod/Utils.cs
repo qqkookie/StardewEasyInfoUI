@@ -12,6 +12,18 @@ namespace EasyInfoUI
 {
     internal static class Utils
     {
+        //internal String
+
+        internal static bool OK(this String s)
+        {
+            return !String.IsNullOrWhiteSpace(s);
+        }
+
+        internal static bool NoOK(this String s)
+        {
+            return String.IsNullOrWhiteSpace(s);
+        }
+
         internal static int SafeParseInt(this string s, int defaultValue = 0)
         {
             return (!string.IsNullOrWhiteSpace(s) && int.TryParse(s, out int result))
@@ -30,7 +42,7 @@ namespace EasyInfoUI
                 ? ModEntry.Translation.Get(key) : defaultValue;
         }
 
-        internal static TValue SafeGet<Tkey, TValue>(this IDictionary<Tkey, TValue> dictionary, Tkey key, TValue defaultValue = default(TValue))
+        internal static TValue SafeGet<Tkey, TValue>(this IDictionary<Tkey, TValue> dictionary, Tkey key, TValue defaultValue = default)
         {
             return (dictionary != null && dictionary.TryGetValue(key, out TValue value))
                         ? value : defaultValue;
@@ -79,8 +91,7 @@ namespace EasyInfoUI
 
         internal static Rectangle GetHeadShot(this NPC npc)
         {
-            int size;
-            if (!_npcHeadShotSize.TryGetValue(npc.Name, out size))
+            if (!_npcHeadShotSize.TryGetValue(npc.Name, out int size))
                 size = 4;
 
             Rectangle mugShotSourceRect = npc.getMugShotSourceRect();
@@ -108,7 +119,7 @@ namespace EasyInfoUI
 
         internal static int GetWidthInPlayArea()
         {
-            int result = 0;
+            int result;
 
             if (Game1.isOutdoorMapSmallerThanViewport())
             {

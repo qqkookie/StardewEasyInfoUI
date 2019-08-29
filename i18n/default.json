@@ -24,9 +24,9 @@
     "label.unit-price": "Unit: ",
     "label.stack-price": "Stack: ",
     "label.crafted-count": "Times crafted: ",
-    "label.Days": "days",
-    "label.Hours": "hours",
-    "label.Minutes": "minutes",
+    "label.days": "days",
+    "label.hourss": "hours",
+    "label.minutes": "minutes",
 
     // Weather Display
     "weather.today-weather": "Today's Weather",
